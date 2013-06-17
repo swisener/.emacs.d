@@ -14,3 +14,5 @@
 (require 'init-package)
 
 (require-package 'better-defaults)
+
+(require 'init-ffip)

@@ -6,9 +6,4 @@
 ; Some projects have a ton of files...
 (setq ffip-limit 4096)
 
-; Probably move this to a global keybindings file
-(global-set-key (kbd "C-x f") 'find-file-in-project)
-
 (provide 'init-ffip)
-
-

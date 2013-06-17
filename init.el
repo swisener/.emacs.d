@@ -14,5 +14,11 @@
 (require 'init-package)
 
 (require-package 'better-defaults)
+(require-package 'diminish)
+(require-package 'color-theme-solarized)
+(require-package 'magit)
+
+(load-theme 'solarized-dark t)
 
 (require 'init-ffip)
+(require 'key-bindings)

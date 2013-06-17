@@ -1,0 +1,8 @@
+auto-save-list
+backups
+*~
+places
+elpa
+*.elc
+.DS_Store
+.yas-compiled-snippets.el

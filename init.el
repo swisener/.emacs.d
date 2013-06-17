@@ -17,6 +17,7 @@
 (require-package 'diminish)
 (require-package 'color-theme-solarized)
 (require-package 'magit)
+(require-package 'ace-jump-mode)
 
 (load-theme 'solarized-dark t)
 

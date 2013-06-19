@@ -1,6 +1,0 @@
-[submodule "vendor/dash"]
-	path = vendor/dash
-	url = git@github.com:magnars/dash.el.git
-[submodule "vendor/find-file-in-project"]
-	path = vendor/find-file-in-project
-	url = git@github.com:technomancy/find-file-in-project.git

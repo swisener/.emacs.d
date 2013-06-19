@@ -2,16 +2,10 @@
 
 (add-to-list 'load-path user-emacs-directory)
 
-;; Set path to dependencies
-(setq vendor-dir
-      (expand-file-name "vendor" user-emacs-directory))
-
-;; Add external projects to load path
-(dolist (project (directory-files vendor-dir t "\\w+"))
-  (when (file-directory-p project)
-    (add-to-list 'load-path project)))
-
 (require 'init-package)
+
+; ace-jump-mode is missing this require for some reason...
+(require 'cl)
 
 (require-package 'better-defaults)
 (require-package 'diminish)

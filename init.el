@@ -24,5 +24,4 @@
 
 (load-theme 'solarized-dark t)
 
-(require 'init-ffip)
 (require 'key-bindings)

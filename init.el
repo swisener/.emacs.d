@@ -23,7 +23,7 @@
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
 (add-hook 'ruby-mode-hook (lambda () (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
 
-(electric-indent-mode t)
+;(electric-indent-mode t)
 
 (require-package 'projectile)
 (projectile-global-mode)

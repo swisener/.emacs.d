@@ -13,9 +13,17 @@
 (require-package 'magit)
 (require-package 'ace-jump-mode)
 (require-package 'ag)
+(require-package 'inf-ruby)
+
+(require-package 'rspec-mode)
+(setq rspec-use-rake-when-possible nil)
+(setq rspec-spec-command "rspec")
 
 (require-package 'flymake-ruby)
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
+(add-hook 'ruby-mode-hook (lambda () (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
+
+(electric-indent-mode t)
 
 (require-package 'projectile)
 (projectile-global-mode)

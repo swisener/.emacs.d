@@ -15,6 +15,9 @@
 (require-package 'ag)
 (require-package 'inf-ruby)
 
+(require-package 'move-text)
+(move-text-default-bindings)
+
 (require-package 'rspec-mode)
 (setq rspec-use-rake-when-possible nil)
 (setq rspec-spec-command "rspec")

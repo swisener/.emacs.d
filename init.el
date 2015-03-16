@@ -64,6 +64,8 @@
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
 
-(load-theme 'solarized-dark t)
+(custom-set-variables
+  '(frame-background-mode 'dark))
+(load-theme 'solarized t)
 
 (require 'key-bindings)

@@ -10,8 +10,13 @@
 (require-package 'better-defaults)
 (require-package 'diminish)
 (require-package 'color-theme-solarized)
+(require-package 'paredit)
+(require-package 'clojure-mode)
+(require-package 'clojure-mode-extra-font-locking)
+(require-package 'cider)
+(require-package 'rainbow-delimiters)
 (require-package 'magit)
-(require-package 'ace-jump-mode)
+(require-package 'avy)
 (require-package 'ag)
 (require-package 'inf-ruby)
 
@@ -63,6 +68,33 @@
     (when indent
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
+
+;; Enable paredit for Clojure
+(add-hook 'clojure-mode-hook 'enable-paredit-mode)
+(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+
+;; This is useful for working with camel-case tokens, like names of
+;; Java classes (e.g. JavaClassName)
+(add-hook 'clojure-mode-hook 'subword-mode)
+
+;; A little more syntax highlighting
+(require 'clojure-mode-extra-font-locking)
+
+;; enable paredit in your REPL
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
+
+(if (eq system-type 'darwin)
+    (require-package 'exec-path-from-shell))
+
+;; Sets up exec-path-from shell
+;; https://github.com/purcell/exec-path-from-shell
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-envs
+   '("PATH")))
+
+;; no bell
+(setq ring-bell-function 'ignore)
 
 (custom-set-variables
   '(frame-background-mode 'dark))

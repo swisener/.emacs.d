@@ -4,6 +4,9 @@
 
 ;;; Use Melpa for most packages
 (add-to-list 'package-archives '("melpa" . "https://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "https://melpa-stable.milkbox.net/packages/"))
+
+(add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 
 ;; If gpg cannot be found, signature checking will fail, so we
 ;; conditionally enable it according to whether gpg is available.
